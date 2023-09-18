@@ -1,5 +1,6 @@
 //definindo a classe GradeBook com uma função que aceita parâmetro
 //cria um objeto GradeBook e chama sua função
+//inclui get e set
 #include <iostream>
 
 using namespace std;
@@ -10,11 +11,23 @@ using namespace std;
 class GradeBook
 {
     public:
-    //exibe mensagem de boas vindas
-    void displayMessage(string nomeDoCurso)
-    {
-        cout << "Welcome to the Grade Book for\n" << nomeDoCurso << "!" << endl;
-    }
+        //exibe mensagem de boas vindas
+        void setCourseName(string name)
+        {
+            courseName = name;
+        }
+        string getCourseName()
+        {
+            return courseName;
+        }
+
+        void displayMessage()
+        {
+            cout << "Welcome to the grade book for\n" << getCourseName() << "!" << endl;
+        }
+
+    private:
+    string courseName;
 };
 
 int main()
@@ -22,11 +35,16 @@ int main()
     string nomeCurso;
     GradeBook myGradeBook;
 
-    cout << "Entre com o nome do curso:" << endl;
-    getline (cin, nomeCurso);
+    cout << "Valor Inicial do curso é:" << myGradeBook.getCourseName() << endl;
+    
+    cout << "Por favor, insira o nome do curso: " << endl;
+
+    getline(cin, nomeCurso);
+    myGradeBook.setCourseName(nomeCurso);
+
     cout << endl;
 
-    myGradeBook.displayMessage(nomeCurso);
+    myGradeBook.displayMessage();
 
     return 0;
 }
