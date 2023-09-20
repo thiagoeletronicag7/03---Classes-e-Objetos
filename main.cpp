@@ -7,7 +7,7 @@ using namespace std;
 
 #include <string>
 
-#include "gradebook.h"
+#include "GradeBook.h"
 
 //definição da classe GradeBook
 
