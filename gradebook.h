@@ -7,24 +7,12 @@ class GradeBook
 private:
     string courseName;
 public:
-    GradeBook(string name)
-    {
-        setCourseName(name);
-    }
+    GradeBook(string name);
 
-    void setCourseName(string name)
-    {
-        courseName = name;
-    }
+    void setCourseName(string name);
 
-    string getCourseName()
-    {
-        return courseName;
-    }
+    string getCourseName();
 
-    void displayMessage()
-    {
-        cout << "Welcome to the gradebook for\n" << getCourseName() << "!" << endl;
-    }
+    void displayMessage();
 };
 
