@@ -3,11 +3,11 @@
 //inclui get e set e construtor
 /*
 Para compilar, utilize o comando:
-g++ -c GradeBook.cpp -o GradeBook.o
-g++ -c main.cpp -o main.o
+g++ main.cpp GradeBook.cpp -o main.exe
 
 depois
-g++ GradeBook.o main.o -o my_program
+execute o programa:
+./main.cpp
 */
 #include <iostream>
 
@@ -21,11 +21,11 @@ using namespace std;
 
 int main()
 {
-    GradeBook gradeBook1("Teste1");
-    GradeBook gradeBook2("Teste2");
+    GradeBook gradeBook1("Teste1", "Thiago");
+    GradeBook gradeBook2("Teste2", "Isadora");
     
-    cout << "Grade book 1: " << gradeBook1.getCourseName();
-    cout << "\nGrade book 2: " << gradeBook2.getCourseName() << endl;
+    gradeBook1.displayMessage();
+    gradeBook2.displayMessage();
 
     return 0;
 }
